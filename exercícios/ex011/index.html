@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens dinamicas</h1>
+    <p>Tente abrir esse site em varios dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+    <picture>
+        <source media="(max-width: 750px )" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px )" srcset="imagens/foto-m.png" type="image/png">
+        <img src="Imagens/foto-g.png" alt="Imagem Flexivel">
+    </picture>
+
+    <h1>Reproduzir Audio</h1>
+    <p>Vamos aprender a responder audios em HTML5.</p>
+    <audio src="midia/Lake Jupiter - John Patitucci.mp3" controls autoplay></audio>
+    <!--Compátives com esses formatos de arquivos de áudio: "MP3-WAV-OGG", o uso do wav não é tão recomendado por causa do peso em MB.
+    autoplay, significa dar play ao iniciar o site,controls, significa dar play na música manualmente com os controles de audio do próprio site.-->
+    <audio preload="metadata" autoplay controls>
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia/guanacast-33.mp3" type="audio/ogg">
+        <source src="midia/guanacast-33.mp3" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue reproduzir áudio.</p>
+        <a href="midia/guanacast-33.mp3">clique aqui para baixar o arquivo MP3.</a>
+    </audio>
+</body>
+</html>
